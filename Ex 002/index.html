@@ -26,7 +26,20 @@
     String > Número.
     Number.parseInt(n) 'num inteiro'.
     Number.parseFloat(n) 'num real'.
-     -->
+    
+    Número > String
+    String(n)
+    n.toString()
+    
+    Formatação string
+    Var s = 'JavaScript'
+    'Eu estou aprendendo s' / não faz interpolação
+    `Eu estou aprendendo` + s / usa concatenação
+
+    s.length / quantos caracteres a string tem
+    s.toUpperCase() / tudo para letras 'MAIÚSCULAS'
+    s.toLowerCase() / tudo para letras 'minúsculas'
+    -->
     <p>
         Muito bem!! E aí, o que achou? <br>
         Gostaria de aprender a programar em JavaScript?😜
@@ -34,10 +47,10 @@
     <h1>Se estiver interessado (a), vamos lá!!! <br>
         🧑🏻‍💻👩🏻‍💻</h1>
     <script>
-        let n1 = Number.parseInt(window.prompt('Digite um número: ')) // Pergunta com resposta!
-        let n2 = Number.parseInt(window.prompt('Digite outro número: ')) // concatenação
+        let n1 = Number(window.prompt('Digite um número: ')) // Pergunta com resposta!
+        let n2 = Number(window.prompt('Digite outro número: ')) // concatenação
         let s = n1 + n2
-        window.alert('A soma dos valores é ' + s)
+        window.alert( `A soma dos valores de ${n1} e ${n2} é igual a ${s}`)
     </script>
 </body>
 </html>
