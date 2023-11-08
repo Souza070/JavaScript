@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            font-size: 2em;
+        }
+
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(12, 168, 90);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<!--
+    Funções = bloco (10 linhas). O bloco só vai ocorrer quando clicar dentro da Div.
+    Pra execução ocorrer tem que colocá-lo dentro de um bloco e esse bloco dentro de uma chave {}
+    nomei o bloco como uma 'function' que quer dizer função. É necessário nomea-lá e geralmente o nome das funções
+    são ações de eventos e abre e fecha parênteses. E opcionalmente dentro do parênteses pode colocar alguns parâmetros.
+    Os eventos podem ser configurados na parte HTML ou JavaScript.-->
+<body>
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar(){
+            var area = window.document.getElementById('area')
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+
+        function entrar(){
+            area.innerText = 'Entrou!'
+            area.style.background = 'gray'
+        }
+
+        function sair() {
+            area.innerText = 'Saiu!'
+            area.style.background = 'green'
+        }
+    </script>
+</body>
+</html>
