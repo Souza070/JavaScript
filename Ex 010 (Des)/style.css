@@ -3,11 +3,14 @@
 body {
     background: rgb(107, 107, 2441);
     font: normal 15pt Arial;
+    margin: auto;
+
 }
 
 header {
     color: white;
     text-align: center;
+    padding: 15px;
 }
 
 section {
